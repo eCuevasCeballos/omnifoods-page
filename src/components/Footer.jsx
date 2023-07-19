@@ -58,8 +58,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className='text-sm md:text-xl sm:grid sm:grid-cols-2 md:gap-10 items-center border-t-2 border-light-gray p-3 pt-20 md:pt-0'>
-      <div className='flex justify-center gap-8 sm:col-start-2'>
+    <footer className='text-sm md:text-xl sm:grid sm:grid-cols-2 md:gap-10 items-start justify-center border-t-2 border-light-gray p-3 h-auto pt-20 md:pt-10'>
+      <div className='flex justify-center pb-4 md:pb-0 items-start md:justify-start gap-8 sm:col-start-2'>
         <div>
           <p className='font-bold mb-6'>Account</p>
           {accounts.map((accounts) => (
@@ -91,8 +91,8 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className='flex flex-col items-center sm:row-start-1'>
-        <div className='flex justify-start gap-8 mt-10 pl-3'>
+      <div className='flex flex-col items-center md:items-end sm:row-start-1'>
+        <div className='flex items-center gap-8 pl-3'>
           <img src={Logo} alt='Omnifoods logo' className='h-4' />
           <p className='font-bold'>Contact us</p>
         </div>
@@ -103,7 +103,7 @@ const Footer = () => {
             <AiOutlineTwitter size={25} />
           </div>
           <p className='text-xs'>
-            623 Harrison St., 2nd Floor, San
+            623 Harrison St., <br /> 2nd Floor, San
             <br />
             Francisco, CA 94107
           </p>

@@ -39,7 +39,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id='Pricing' className='xl:p-32'>
+    <section id='Pricing' className='xl:px-32 xl:py-8'>
       <article className='p-8'>
         <div>
           <span className='font-bold text-sm text-orange tracking-wider uppercase'>
@@ -75,7 +75,7 @@ const Pricing = () => {
                 <AiOutlineClose size={20} className='text-orange' />
                 Priority delivery
               </p>
-              <button className='text-white font-bold bg-orange p-3 rounded-lg'>
+              <button className='text-white font-bold bg-orange p-2 rounded-lg cursor-pointer'>
                 Start eating well
               </button>
             </div>
@@ -104,7 +104,7 @@ const Pricing = () => {
                 <AiOutlineCheck size={20} className='text-orange' /> Priority
                 delivery
               </p>
-              <button className='text-white font-bold bg-orange p-3 rounded-lg'>
+              <button className='text-white font-bold bg-orange p-2 rounded-lg z-10 cursor-pointer'>
                 Start eating well
               </button>
             </div>

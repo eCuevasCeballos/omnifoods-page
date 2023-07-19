@@ -119,7 +119,10 @@ const Hiw = () => {
     },
   ];
   return (
-    <section className='p-4 md:p-32' id='How it works'>
+    <section
+      className='pt-12 pb-8 px-4 md:px-0 xl:w-3/5 md:w-3/4 md:mx-auto'
+      id='How it works'
+    >
       <article>
         <span className='text-orange uppercase text-sm font-bold tracking-wider'>
           how it works
@@ -181,7 +184,7 @@ const Hiw = () => {
         </h2>
         <div className='grid md:grid-cols-2 xl:grid-cols-3'>
           {meals.map((meals) => (
-            <div className='rounded-xl mx-auto overflow-hidden shadow-2xl shadow-gray mb-10 w-4/5 xl:w-3/4'>
+            <div className='rounded-xl mx-auto overflow-hidden shadow-2xl shadow-gray mb-10 w-4/5 xl:w-3/4 hover:transform hover:-translate-y-3 hover:transition-transform hover:duration-500'>
               <img key={meals.id} src={meals.img} alt={meals.imgDescription} />
               <div className='p-5 text-dark-gray'>
                 <div className='flex gap-3'>

@@ -6,96 +6,92 @@ import Customer4 from '../assets/customer-4.jpg';
 import Customer5 from '../assets/customer-5.jpg';
 import Customer6 from '../assets/customer-6.jpg';
 import Hero from '../assets/hero.webp';
-import Tech from '../assets/techcrunch.png';
-import Business from '../assets/business-insider.png';
-import NYtimes from '../assets/the-new-york-times.png';
-import Forbes from '../assets/forbes.png';
-import Usa from '../assets/usa-today.png';
 
 const Home = () => {
-  const imgDecoration =
-    'rounded-full w-8 h-8 xl:h-11 xl:w-11 -mr-3 border-2 border-light-orange';
+  const customers = [
+    {
+      id: 1,
+      img: Customer1,
+    },
+    {
+      id: 2,
+      img: Customer2,
+    },
+    {
+      id: 3,
+      img: Customer3,
+    },
+    {
+      id: 4,
+      img: Customer4,
+    },
+    {
+      id: 5,
+      img: Customer5,
+    },
+    {
+      id: 6,
+      img: Customer6,
+    },
+  ];
+
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   return (
-    <header className='bg-light-orange pt-20' id='home'>
-      <div className='w-11/12 mx-auto mb-10 md:flex md:items-center md:justify-center'>
-        <div className='md:p-10'>
-          <h1 className='text-4xl font-bold text-dark-gray pb-8'>
+    <header id='Home' className='bg-light-orange p-6'>
+      <section className='grid gap-5 items-center justify-center md:grid-cols-2 md:w-9/12 md:mx-auto pt-12 md:pt-32'>
+        <div className='flex flex-col gap-y-10'>
+          {/* Text / column 1 */}
+          <h1 className='text-4xl xl:text-6xl font-bold text text-center md:text-start'>
             A healthy meal delivered to your door, every single day
           </h1>
-          <p className='text-justify'>
+          <p className='md:text-2xl text-center md:text-start'>
             The smart 365-days-per-year food subscription that will make you eat
             healthy again. Tailored to your personal tastes and nutritional
             needs.
           </p>
-
-          <div className='flex justify-center gap-5 w-5/6 mx-auto py-8'>
-            <button className='text-white bg-orange font-bold rounded-lg cursor-pointer p-2'>
+          <div className='flex gap-4 mx-auto md:mx-0'>
+            <button className='bg-orange rounded-xl p-2 font-bold text-white'>
               Start eating well
             </button>
-            <button className='text-dark-gray bg-white font-bold rounded-lg cursor-pointer p-3'>
+            <button
+              className='bg-white border-2 border-white rounded-xl p-3 font-bold text-black  hover:bg-light-orange'
+              onClick={() => scrollToSection('sponsors')}
+            >
               Learn more!
             </button>
           </div>
-          <div className='flex items-center justify-center pb-5 mx-auto'>
-            <div className='flex w-1/2 justify-center'>
-              <img
-                src={Customer1}
-                alt='customer photo'
-                className={`${imgDecoration}`}
-              />
-              <img
-                src={Customer2}
-                alt='customer photo'
-                className={`${imgDecoration}`}
-              />
-              <img
-                src={Customer3}
-                alt='customer photo'
-                className={`${imgDecoration}`}
-              />
-              <img
-                src={Customer4}
-                alt='customer photo'
-                className={`${imgDecoration}`}
-              />
-              <img
-                src={Customer5}
-                alt='customer photo'
-                className={`${imgDecoration}`}
-              />
-              <img
-                src={Customer6}
-                alt='customer photo'
-                className={`${imgDecoration}`}
-              />
+          <div className='flex flex-col xl:flex-row gap-5 items-center justify-center md:justify-start'>
+            <div className='flex'>
+              {customers.map((customers, index) => (
+                <img
+                  key={customers.id}
+                  src={customers.img}
+                  alt='Random customer picture'
+                  className={`rounded-full border-2 md:w-12 md:h-12 w-9 h-9 border-light-orange  overflow-clip ${
+                    index === 0 ? '' : '-ml-3'
+                  } `}
+                />
+              ))}
             </div>
-            <p className='text-dark-gray font-bold w-1/2'>
-              <span className='text-orange'>250,000+</span> meals delivered last
-              year!
-            </p>
+            <div className='max-w-full h-auto'>
+              <p className='font-bold md:text-sm text-center'>
+                <span className='text-orange'>250,000+</span> meals delivered
+                last year
+              </p>
+            </div>
           </div>
         </div>
-        <div className='justify-center flex'>
-          <img
-            src={Hero}
-            alt='Woman enjoying food, meals in storage container, and food bowls on a table'
-            className='md:w-5/6 md:h-auto'
-          />
+        <div>
+          {/* Image column 2 */}
+          <img src={Hero} alt='Various pictures grouped together' />
         </div>
-      </div>
-      <div className='bg-white m-auto w-full py-8'>
-        <h2 className='uppercase text-gray text-center text-sm pb-8 tracking-wide'>
-          as featured in
-        </h2>
-        <div className='flex justify-center h-3 md:h-6 gap-1 md:gap-8 brightness-0 opacity-50'>
-          <img src={Tech} alt='Tech Crunch logo' />
-          <img src={Business} alt='Business insider logo' />
-          <img src={NYtimes} alt='The New York Times logo' />
-          <img src={Forbes} alt='Forbes logo' />
-          <img src={Usa} alt='USA Today logo' />
-        </div>
-      </div>
+      </section>
     </header>
   );
 };

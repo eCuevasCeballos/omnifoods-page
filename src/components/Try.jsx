@@ -34,39 +34,39 @@ const Try = () => {
             }
           />
         </div>
-        <div className='flex-grow justify-center p-5 md:justify-center md:items-center pb-0'>
+        <div className='flex-grow flex flex-col justify-center items-center p-5 md:justify-center md:items-center md:w-4/5 md:mx-auto'>
           <h2 className='font-bold text-3xl'>Get your first meal for free!</h2>
-          <p className='pt-3 text-justify'>
+          <p className='p-6 text-justify'>
             Healthy, tasty and hassle-free meals are waiting for you. Start
             eating well today. You can cancel or pause anytime. And the first
             meal is on us!
           </p>
-          <div className='grid'>
-            <div className='pt-3'>
+          <div className='grid sm:grid-cols-1 gap-y-3 md:grid-cols-2 md:grid-rows-2 md:gap-2 text-xs'>
+            <div className='flex flex-col'>
               {/* Full name */}
-              <label htmlFor='name' className='flex flex-col'>
-                <span className='font-bold'>Full name</span>
-                <input
-                  type='text'
-                  name='name'
-                  placeholder='John Smith'
-                  className='form'
-                />
+              <label htmlFor='name' className='font-bold'>
+                Full name
               </label>
+              <input
+                type='text'
+                id='name'
+                placeholder='John Smith'
+                className='form'
+              />
             </div>
-            <div className='pt-3'>
+            <div className='flex flex-col'>
               {/* Email address */}
-              <label htmlFor='email' className='flex flex-col'>
-                <span className='font-bold'>Full name</span>
-                <input
-                  type='email'
-                  name='email'
-                  placeholder='me@example.com'
-                  className='form'
-                />
+              <label htmlFor='email' className='font-bold'>
+                Email address
               </label>
+              <input
+                type='email'
+                id='email'
+                placeholder='me@example.com'
+                className='form'
+              />
             </div>
-            <div className='pt-3'>
+            <div>
               {/* Selection */}
               <span className='font-bold'>Where did you hear from us?</span>
               <select name='platform' id='platform' className='form w-full'>
@@ -78,8 +78,8 @@ const Try = () => {
                 <option value='other'>Others</option>
               </select>
             </div>
-            <div className='w-full flex items-center my-6'>
-              <button className='text-white font-bold bg-brown p-2 w-full rounded-md'>
+            <div className='w-full flex items-end sm:mb-0'>
+              <button className='text-white text-lg font-bold bg-brown p-2 w-full rounded-md hover:bg-white hover:text-black'>
                 Sign Up
               </button>
             </div>

@@ -10,7 +10,7 @@ font-family: 'Rubik', sans-serif;
 html,
 body {
   font-family: 'Rubik', sans-serif;
-  color: #333333;
+  color: #45260a;
 }
 
 .step-img {
@@ -100,7 +100,7 @@ nav.scrolled {
 .form {
   border-radius: 9px;
   background-color: #fdf2e9;
-  padding: 0.2rem;
+  padding: 0.8rem;
   font-family: inherit;
   color: inherit;
   border: none;

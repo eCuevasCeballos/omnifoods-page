@@ -125,11 +125,12 @@ const Testimonials = () => {
       </div>
       <div className='grid grid-cols-4 grid-rows-3 w-full p-3 gap-2'>
         {gallery.map((gallery) => (
-          <div>
+          <div className='overflow-hidden'>
             <img
               key={gallery.id}
               src={gallery.img}
               alt='Gallery sample picture'
+              className='hover:scale-110 hover:transition-transform hover:duration-700'
             />
           </div>
         ))}

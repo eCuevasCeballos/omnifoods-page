@@ -5,12 +5,14 @@ import Pricing from './components/Pricing.jsx';
 import Try from './components/Try.jsx';
 import NavBar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
+import Sponsors from './components/Sponsors.jsx';
 
 function App() {
   return (
     <>
       <NavBar />
       <Home />
+      <Sponsors />
       <Hiw />
       <Testimonials />
       <Pricing />
