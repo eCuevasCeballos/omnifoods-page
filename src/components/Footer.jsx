@@ -112,6 +112,24 @@ const Footer = () => {
           <p>
             Copyright © 2023
             <br /> by Omnifood, Inc. <br /> All rights reserved.
+            <p>
+              Design by:{' '}
+              <a
+                href='https://twitter.com/jonasschmedtman'
+                className='font-bold'
+              >
+                @jonasschmedtman
+              </a>
+            </p>
+            <p>
+              Code by:{' '}
+              <a
+                href='https://github.com/eCuevasCeballos'
+                className='font-bold'
+              >
+                @eCuevasCeballos
+              </a>
+            </p>
           </p>
           <p>
             415-201-6370 <br /> hello@omnifood.com
